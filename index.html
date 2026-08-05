@@ -6,10 +6,24 @@
 </head>
 <body>
 
-    <h1>POEPEOPIPI</h1>
-    <p>This is my website.</p>
+    <button onclick="openTab('about')">About</button>
+    <button onclick="openTab('projects')">Projects</button>
+    <button onclick="openTab('links')">Links</button>
 
-    <button onclick="sayHello()">Click me</button>
+    <div id="about" class="tab">
+        <h1>Home</h1>
+        <p>Welcome to my website.</p>
+    </div>
+
+    <div id="projects" class="tab">
+        <h1>About</h1>
+        <p>This is the projects page.</p>
+    </div>
+
+    <div id="links" class="tab">
+        <h1>Contact</h1>
+        <p>This is the links page.</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
