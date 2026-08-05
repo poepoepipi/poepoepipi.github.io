@@ -9,3 +9,13 @@ function openTab(tabName) {
 }
 
 openTab("home");
+
+const apiKey = "DEMO_KEY";
+
+fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.media_type === "image") {
+            document.body.style.backgroundImage = `url(${data.url})`;
+        }
+    });
