@@ -20,7 +20,7 @@ body::before {
 button {
     padding: 10px;
     margin: 5px;
-    background: red;
+    background: black;
     color: white;
     border: none;
     cursor: pointer;
