@@ -10,12 +10,10 @@ function openTab(tabName) {
 
 openTab("home");
 
-const apiKey = "DEMO_KEY";
-
-fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+fetch("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US")
     .then(response => response.json())
     .then(data => {
-        if (data.media_type === "image") {
-            document.body.style.backgroundImage = `url(${data.url})`;
-        }
-    });
+        const imageUrl = "https://www.bing.com" + data.images[0].url;
+        document.body.style.backgroundImage = `url(${imageUrl})`;
+    })
+    .catch(error => console.error("Failed to load Bing wallpaper:", error));
