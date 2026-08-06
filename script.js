@@ -10,4 +10,4 @@ function openTab(tabName) {
 
 openTab("home");
 
-document.body.style.backgroundImage = "url(https://picsum.photos/1920/1080)";
+document.body.style.backgroundImage = "background.jpg";
